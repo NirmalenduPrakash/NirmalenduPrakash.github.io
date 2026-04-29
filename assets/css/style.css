@@ -1,0 +1,196 @@
+/* Academic personal site — inspired by readable GitHub-style markdown layouts */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #24292e;
+  --text-muted: #586069;
+  --link: #0366d6;
+  --border: #e1e4e8;
+  --bg: #ffffff;
+  --bg-subtle: #f6f8fa;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+    Georgia, serif;
+  --measure: 44rem;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(to bottom, #fafbfc, #fff);
+}
+
+.site-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 2rem;
+}
+
+.site-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.15rem;
+  color: var(--text);
+}
+
+.site-tagline {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9375rem;
+}
+
+.nav a {
+  color: var(--text-muted);
+}
+
+.nav a:hover {
+  color: var(--link);
+}
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section > h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  padding-bottom: 0.35em;
+  margin: 2rem 0 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+section:first-child > h2 {
+  margin-top: 0;
+}
+
+.lead {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.lead strong {
+  font-weight: 600;
+}
+
+ul.plain-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+ul.plain-list li {
+  margin-bottom: 0.35rem;
+}
+
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pub-list li {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pub-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.pub-title {
+  font-weight: 600;
+}
+
+.pub-meta {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.note {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+hr.sep {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+  }
+}
